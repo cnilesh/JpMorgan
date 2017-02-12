@@ -7,7 +7,6 @@ com\message\processor\Processor.class
 com\message\enums\Indicator.class
 com\message\interceptor\ValidatingInterceptor.class
 com\message\helper\DateUtil.class
-com\message\main\MainMessageReceiver.class
 com\message\helper\ToBeValidated.class
 com\message\helper\ValidationUtil.class
 com\message\pojo\Entity.class

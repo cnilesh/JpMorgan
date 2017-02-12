@@ -3,7 +3,7 @@ package com.message.interceptor;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-
+import com.message.helper.EveryDayTradeProcessor;
 import com.message.helper.MessageProcessor;
 import com.message.helper.ToBeValidated;
 import com.message.helper.ValidationUtil;
@@ -23,7 +23,13 @@ public class ValidatingInterceptor implements InvocationHandler{
 		  ValidationUtil util = new ValidationUtil();
 		  util.validate((Entity)args[0]);
 		  }
-          return method.invoke(this.messageProcessor, args);
+         method.invoke(this.messageProcessor, args);
+         
+         EveryDayTradeProcessor everydayProcessor = EveryDayTradeProcessor.getInstance();
+         
+         everydayProcessor.process((Entity)args[0]);
+         
+         return new Object();
       }
 
 //	public Object intercept(Object arg0, Method arg1, Object[] arg2, MethodProxy arg3) throws Throwable {
