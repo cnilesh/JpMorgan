@@ -1,0 +1,15 @@
+com\message\storage\MessageStore.class
+com\message\helper\EveryDayTradeProcessor.class
+com\message\processor\ProcessorFactory.class
+com\message\helper\MessageProcessor.class
+com\message\comparator\MessageComparator.class
+com\message\processor\Processor.class
+com\message\enums\Indicator.class
+com\message\interceptor\ValidatingInterceptor.class
+com\message\helper\DateUtil.class
+com\message\main\MainMessageReceiver.class
+com\message\helper\ToBeValidated.class
+com\message\helper\ValidationUtil.class
+com\message\pojo\Entity.class
+com\message\exception\MessageException.class
+com\message\helper\ReportProcessor.class
