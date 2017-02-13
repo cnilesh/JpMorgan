@@ -29,5 +29,8 @@ public class ValidationUtil {
 		if(entity.getPricePerUnit().compareTo(new BigDecimal("0.01")) < 0){
 			throw new MessageException("Invalid price per unit");
 		}
+		if("USD".equals(entity.getCurrency()) && new BigDecimal("1.00").compareTo(entity.getFxRate()) != 0){
+			throw new MessageException("FX rate should be 1 for USD currency");
+		}
 	}
 }
